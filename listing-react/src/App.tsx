@@ -1,11 +1,11 @@
 import React from "react";
 import Listing from './Listing.tsx'; 
 import './App.css';
-import type { ListingItem } from './ListingItem';
-
+import type { ListingItem } from './ListingItem.ts';
+import type { RawListing } from './RawListing.ts'
 import listingsData from './assets/etsy.json';
 
-function filterListings(listings: any[]): ListingItem[] {
+function filterListings(listings: RawListing[]): ListingItem[] {
   return listings.map((item) => ({
     listing_id: item.listing_id,
     url: item.url,
